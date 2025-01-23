@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-const slugify = require('slugify');
 
 const eventSchema = new mongoose.Schema(
 
@@ -10,7 +9,6 @@ const eventSchema = new mongoose.Schema(
       unique: true,
       trim: true
     },
-    slug: String,
     description: {
       type: String,
       trim: true,
