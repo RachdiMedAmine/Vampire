@@ -1,0 +1,44 @@
+<app-nav-bar></app-nav-bar>
+<div class="latest-news-section">
+    <div class="ln-title">Latest News</div>
+    <div class="news-ticker">
+        <marquee behavior="scroll" direction="left" scrollamount="15" class="news-ticker-content">
+            <div class="nt-item"><span class="new">new</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </div>
+            <div class="nt-item"><span class="strategy">strategy</span>Isum dolor sit amet, consectetur adipiscing elit. </div>
+            <div class="nt-item"><span class="racing">racing</span>Isum dolor sit amet, consectetur adipiscing elit. </div>
+        </marquee>
+    </div>
+</div>
+
+<!-- Page info section -->
+<section class="page-info-section set-bg" style="background-image: url('anime_bg.jpg');">
+    <div class="pi-content">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-5 col-lg-6 text-white">
+                    <h2>Available Animes</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris scelerisque, at rutrum nulla dictum.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Page info section -->
+
+<section class="page-section review-page spad">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6" *ngFor="let anime of animes">
+          <div class="review-item">
+            <div class="review-cover set-bg" [ngStyle]="{'background-image': 'url(' + anime.imageUrl + ')'}">
+            </div>
+            <div class="review-text">
+              <h4>{{ anime.title }}</h4>
+              <p>{{ anime.description }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+<app-footer></app-footer>

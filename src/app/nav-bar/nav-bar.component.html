@@ -1,0 +1,30 @@
+<header class="header-section">
+    <div class="container">
+      <!-- logo -->
+      <a class="site-logo" href="#">
+        <img src="logo.png" />
+        <span>Chfama Jedid</span>
+      </a>
+  
+      <div class="user-panel">
+        <!-- Show image and user full name if logged in, else show Login/Register -->
+        <div *ngIf="isLoggedIn; else loggedOut">
+          <img [src]="userImage" alt="User Image" class="user-image" />
+          <span>{{ userName }}</span>
+        </div>
+        <ng-template #loggedOut>
+          <a routerLink="/login">Login</a> <span> / </span><a routerLink="/signup">Register</a>
+        </ng-template>
+      </div>
+  
+      <!-- site menu -->
+      <nav class="main-menu">
+        <ul>
+          <li><a routerLink="/home">Home</a></li>
+          <li><a routerLink="/games">Games</a></li>
+          <li><a routerLink="/animes">Animes</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  

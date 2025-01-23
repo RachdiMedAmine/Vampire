@@ -1,0 +1,45 @@
+<app-nav-bar></app-nav-bar>
+<div class="latest-news-section">
+    <div class="ln-title">Latest News</div>
+    <div class="news-ticker">
+        <marquee behavior="scroll" direction="left" scrollamount="15" class="news-ticker-content">
+            <div class="nt-item"><span class="new">new</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </div>
+            <div class="nt-item"><span class="strategy">strategy</span>Isum dolor sit amet, consectetur adipiscing elit. </div>
+            <div class="nt-item"><span class="racing">racing</span>Isum dolor sit amet, consectetur adipiscing elit. </div>
+        </marquee>
+    </div>
+</div>
+
+<!-- Page info section -->
+<section class="page-info-section set-bg" style="background-image: url('8.jpg');">
+    <div class="pi-content">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-5 col-lg-6 text-white">
+                    <h2>Available Games</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris scelerisque, at rutrum nulla dictum.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Page info section -->
+
+<section class="page-section review-page spad">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6" *ngFor="let game of games">
+          <div class="review-item">
+            <div class="review-cover set-bg" [ngStyle]="{'background-image': 'url(' + game.imageUrl + ')'}">
+            </div>
+            <div class="review-text">
+              <h4>{{ game.title }}</h4>
+              <p>{{ game.description }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+ <app-footer></app-footer>

@@ -1,0 +1,217 @@
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;  /* Full viewport height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.hero-content {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.hs-text {
+    position: absolute;
+    bottom: 250px;
+    left: 50px;
+    color: #fff;
+    text-align: left;
+}
+
+.hs-text h2 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.hs-text h2 span {
+    color: #8B0000; /* Highlighted color */
+}
+
+.hs-text p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.site-btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #8B0000;
+    color: #131313;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 30px;
+    text-decoration: none;
+}
+
+.site-btn:hover {
+    background-color: #fff;
+    color: #131313;
+}
+
+.latest-news-section {
+    overflow: hidden;
+    display: block;
+    clear: both;
+    background: #222;
+    padding: 24px 0;
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.ln-title {
+    position: absolute;
+    height: 100%;
+    width: 29%;
+    left: 0;
+    top: 0;
+    text-align: right;
+    padding-top: 24px;
+    padding-right: 66px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #fff;
+    background: #8B0000;
+    z-index: 1;
+}
+
+.news-ticker {
+    width: 71%;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.news-ticker-content {
+    display: inline-block; /* Not necessary for marquee, but keeps consistency */
+}
+
+.nt-item {
+    margin-right: 35px;
+    color: #fff;
+    display: inline-block;
+}
+
+.nt-item span {
+    margin-right: 35px;
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 500;
+    color: #fff;
+    padding: 4px 20px;
+}
+
+.nt-item span.new {
+    background: #ff205f;
+}
+
+.nt-item span.strategy {
+    background: #4eae60;
+}
+
+.nt-item span.racing {
+    background: #694eae;
+}
+
+@keyframes marquee {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+/*----------------------
+  Recent Game Section
+------------------------*/
+
+.recent-game-section {
+	background-color: #eef2f6;
+	border-top: 1px solid #d6dee7;
+	border-bottom: 1px solid #d6dee7;
+}
+
+.recent-game-item .rgi-thumb {
+	height: 204px;
+	padding: 25px 28px;
+}
+
+.recent-game-item .rgi-content {
+	padding: 34px 22px 20px;
+	background: #fff;
+	border: 1px solid #d6dee7;
+	border-top: none;
+	position: relative;
+}
+
+.recent-game-item .rgi-content h5 {
+	margin-bottom: 20px;
+	line-height: 1.5;
+}
+
+.recent-game-item .rgi-content .comment {
+	font-size: 12px;
+	color: #737373;
+}
+
+.recent-game-item .rgi-extra {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	width: 70px;
+}
+
+.recent-game-item .rgi-extra .rgi-star,
+.recent-game-item .rgi-extra .rgi-heart {
+	height: 35px;
+	width: 35px;
+	float: left;
+	display: block;
+	padding: 6px 8px 0;
+}
+
+
+.section-title {
+    text-align: center;
+    margin-bottom: 75px;
+    margin-top: 30px;
+}
+
+.section-title h2{
+    margin: 15px;
+    font-size: 36px;
+}
+.cata.new {
+    background: #ff205f;
+}
+
+.cata.racing {
+    background: #694eae;
+}
+.cata.adventure {
+    background: #40abf5;
+}
+.cata {
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 500;
+    color: #fff;
+    padding: 6px 25px;
+}
+.set-bg {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+}

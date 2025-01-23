@@ -1,0 +1,49 @@
+<!-- login.component.html -->
+<div class="login-background">
+    <div class="form-container">
+      <img src="logo.png" alt="Website Logo" class="logo" />
+      
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <div class="input-group">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            placeholder="Enter your email"
+            formControlName="email"
+          />
+          <div *ngIf="loginForm.controls['email'].invalid && loginForm.controls['email'].touched" class="error">
+            Please enter a valid email.
+          </div>
+        </div>
+  
+        <div class="input-group">
+          <label for="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            placeholder="Enter your password"
+            formControlName="password"
+          />
+          <div *ngIf="loginForm.controls['password'].invalid && loginForm.controls['password'].touched" class="error">
+            Password must be at least 6 characters long.
+          </div>
+        </div>
+  
+        <div class="row mt-4 mb-2">
+          <div class="col-6">
+            <button type="submit" class="submit-button" [disabled]="loginForm.invalid">Login</button>
+          </div>
+          <div class="col-6">
+            <button routerLink="/home" class="submit-button">Home</button>
+          </div>
+        </div>
+      </form>
+      <div class="row mt-4">
+        <p>
+          Don't have an account? <a routerLink="/signup" class="signup-link">Sign Up</a>
+        </p>
+      </div>
+    </div>
+  </div>
+  

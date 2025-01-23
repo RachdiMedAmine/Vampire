@@ -1,0 +1,155 @@
+.latest-news-section {
+    overflow: hidden;
+    display: block;
+    clear: both;
+    background: #222;
+    padding: 24px 0;
+    position: relative;
+    
+    
+}
+
+.ln-title {
+    position: absolute;
+    height: 100%;
+    width: 29%;
+    left: 0;
+    top: 0;
+    text-align: right;
+    padding-top: 24px;
+    padding-right: 66px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #fff;
+    background: #8B0000;
+    z-index: 1;
+}
+
+.news-ticker {
+    width: 71%;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.news-ticker-content {
+    display: inline-block; /* Not necessary for marquee, but keeps consistency */
+}
+
+.nt-item {
+    margin-right: 35px;
+    color: #fff;
+    display: inline-block;
+}
+
+.nt-item span {
+    margin-right: 35px;
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 500;
+    color: #fff;
+    padding: 4px 20px;
+}
+
+.nt-item span.new {
+    background: #ff205f;
+}
+
+.nt-item span.strategy {
+    background: #4eae60;
+}
+
+.nt-item span.racing {
+    background: #694eae;
+}
+
+@keyframes marquee {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+.page-info-section {
+    height: 499px;
+    position: relative;
+}
+.set-bg {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+}
+
+.page-info-section .pi-content {
+    position: absolute;
+    width: 100%;
+    bottom: 65px;
+    left: 0;
+    z-index: 2;
+}
+
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.page-info-section .pi-content h2 {
+    font-size: 60px;
+    margin-bottom: 25px;
+    font-weight: 400;
+}
+
+.review-page .review-item {
+	margin-bottom: 63px;
+}
+
+.review-item .review-text {
+    text-align: center;
+}
+
+.review-page .review-item .review-text h4 {
+	margin-bottom: 10px;
+}
+
+.review-dark .review-item .review-text p {
+	color: #b5b5b5;
+}
+
+.review-section.review-dark {
+	background-position: center top;
+}
+
+.review-item .review-cover {
+    position: relative;
+    margin-bottom: 30px;
+    height: 345px;
+}
+
+.set-bg {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+}
+
+.review-item .review-cover .score {
+    position: absolute;
+    width: 54px;
+    height: 54px;
+    top: -27px;
+    left: 26px;
+    padding-top: 15px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #fff;
+    text-align: center;
+    border-radius: 50%;
+    z-index: 1;
+}
+.spad{
+    margin-top: 90px;
+}
