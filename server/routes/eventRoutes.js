@@ -21,6 +21,8 @@ router
     eventController.deleteEvent
   );
 
+router.route('/type/:type').get(eventController.getEventsByType);
+
 router.route('/latest/:type').get(eventController.getLatestEventsByType);
 
 module.exports = router;

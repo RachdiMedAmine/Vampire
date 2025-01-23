@@ -31,4 +31,25 @@ exports.getLatestEventsByType = catchAsync(async (req, res, next) => {
       }
     });
   });
+
+exports.getEventsByType = catchAsync(async (req, res, next) => {
+    const { type } = req.params;
+  
+    // Validate the type
+    if (!['gaming', 'anime'].includes(type)) {
+      return next(new AppError('Invalid type. Type must be either "gaming" or "anime".', 400));
+    }
+  
+    // Fetch events by type
+    const events = await Event.find({ type });
+  
+    res.status(200).json({
+      status: 'success',
+      results: events.length,
+      data: {
+        events,
+      },
+    });
+  });
+  
   
