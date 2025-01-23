@@ -11,8 +11,8 @@ export class AnimesComponent implements OnInit{
   constructor(private dataService: DataService) {}
 
   ngOnInit(): void {
-    this.dataService.getAnimes().subscribe((data) => {
-      this.animes = data;
+    this.dataService.getAnimes().subscribe((response: any) => {
+      this.animes = response.data.events; 
     });
   }
 

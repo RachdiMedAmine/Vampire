@@ -6,15 +6,15 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class DataService {
-  private baseUrl = 'http://localhost:3000/api';
+  private baseUrl = 'http://localhost:3000/api/v1/events/type';
 
   constructor(private http: HttpClient) {}
 
   getGames(): Observable<any> {
-    return this.http.get(`${this.baseUrl}/games`);
+    return this.http.get(`${this.baseUrl}/gaming`);
   }
 
   getAnimes(): Observable<any> {
-    return this.http.get(`${this.baseUrl}/animes`);
+    return this.http.get(`${this.baseUrl}/anime`);
   }
 }
